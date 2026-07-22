@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.13.12 on win32)" generated="2026-07-21T23:41:52.850237" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Projects\TorontoCollege-IIBS\saucedemo-automation\tests">
+<suite id="s1-s1" name="First Test" source="C:\Projects\TorontoCollege-IIBS\saucedemo-automation\tests\first_test.robot">
+<test id="s1-s1-t1" name="Load SauceDemo Homepage" line="5">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-07-21T23:41:55.052603" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Projects\\TorontoCollege-IIBS\\saucedemo-automation\\results\\browser\\traces\\temp\\a986fb4f-5ebd-4c54-89ad-97ca31c90a70"}</msg>
+<msg time="2026-07-21T23:41:56.377775" level="INFO">Starting Browser process C:\Users\leyeb\AppData\Local\Programs\Python\Python313\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:60977</msg>
+<msg time="2026-07-21T23:41:59.536131" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Projects\\TorontoCollege-IIBS\\saucedemo-automation\\results\\browser\\traces\\temp\\a986fb4f-5ebd-4c54-89ad-97ca31c90a70"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-07-21T23:41:55.051196" elapsed="4.485438"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-07-21T23:42:00.373763" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<msg time="2026-07-21T23:42:00.373934" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.saucedemo.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-07-21T23:41:59.565488" elapsed="0.808750"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-07-21T23:42:10.376116" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-07-21T23:42:00.374907" elapsed="10.001363"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2026-07-21T23:42:10.389013" level="INFO">Title: 'Swag Labs'</msg>
+<msg time="2026-07-21T23:42:10.389282" level="INFO">${title} = Swag Labs</msg>
+<var>${title}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-07-21T23:42:10.376755" elapsed="0.012599"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${title}</arg>
+<arg>Swag Labs</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-07-21T23:42:10.389824" elapsed="0.000840"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-07-21T23:42:10.834589" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-07-21T23:42:10.391115" elapsed="0.443686"/>
+</kw>
+<status status="PASS" start="2026-07-21T23:41:55.050135" elapsed="15.785085"/>
+</test>
+<status status="PASS" start="2026-07-21T23:41:52.924463" elapsed="17.924265"/>
+</suite>
+<suite id="s1-s2" name="Login Test" source="C:\Projects\TorontoCollege-IIBS\saucedemo-automation\tests\login_test.robot">
+<test id="s1-s2-t1" name="Load SauceDemo Homepage and Login" line="10">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-07-21T23:42:10.879288" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Projects\\TorontoCollege-IIBS\\saucedemo-automation\\results\\browser\\traces\\temp\\4843b84a-f00e-433d-bce6-8d19ea92c920"}</msg>
+<msg time="2026-07-21T23:42:11.454970" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Projects\\TorontoCollege-IIBS\\saucedemo-automation\\results\\browser\\traces\\temp\\4843b84a-f00e-433d-bce6-8d19ea92c920"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-07-21T23:42:10.878187" elapsed="0.577288"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-07-21T23:42:12.321213" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com/</msg>
+<msg time="2026-07-21T23:42:12.321365" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-07-21T23:42:11.477650" elapsed="0.844066"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-07-21T23:42:22.323588" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-07-21T23:42:12.322280" elapsed="10.001472"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2026-07-21T23:42:22.333848" level="INFO">Title: 'Swag Labs'</msg>
+<msg time="2026-07-21T23:42:22.334088" level="INFO">${title} = Swag Labs</msg>
+<var>${title}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-07-21T23:42:22.324153" elapsed="0.009998"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${title}</arg>
+<arg>Swag Labs</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-07-21T23:42:22.334694" elapsed="0.000802"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-07-21T23:42:22.336541" level="INFO">Clicks the element '[data-test="username"]'.</msg>
+<arg>[data-test="username"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-07-21T23:42:22.335924" elapsed="0.076107"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-07-21T23:42:22.413106" level="INFO">Fills the text 'standard_user' in the given field.</msg>
+<arg>[data-test="username"]</arg>
+<arg>${USERNAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-07-21T23:42:22.412477" elapsed="0.015579"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-07-21T23:42:22.429224" level="INFO">Clicks the element '[data-test="password"]'.</msg>
+<arg>[data-test="password"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-07-21T23:42:22.428503" elapsed="0.040920"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-07-21T23:42:22.470319" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
+<arg>[data-test="password"]</arg>
+<arg>${PASSWORD}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-07-21T23:42:22.469751" elapsed="0.011350"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-07-21T23:42:22.482332" level="INFO">Clicks the element '[data-test="login-button"]'.</msg>
+<arg>[data-test="login-button"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-07-21T23:42:22.481557" elapsed="0.135711"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2026-07-21T23:42:22.618609" level="INFO">Clicks the element '[data-test="add-to-cart-sauce-labs-bike-light"]'.</msg>
+<arg>[data-test="add-to-cart-sauce-labs-bike-light"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-07-21T23:42:22.617951" elapsed="0.073558"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-07-21T23:42:32.693388" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-07-21T23:42:22.692028" elapsed="10.001688"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-07-21T23:42:33.030719" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-07-21T23:42:32.694911" elapsed="0.336044"/>
+</kw>
+<status status="PASS" start="2026-07-21T23:42:10.871479" elapsed="22.159900"/>
+</test>
+<status status="PASS" start="2026-07-21T23:42:10.860732" elapsed="22.179215"/>
+</suite>
+<suite id="s1-s3" name="Pagetestlogin" source="C:\Projects\TorontoCollege-IIBS\saucedemo-automation\tests\pagetestlogin.robot">
+<test id="s1-s3-t1" name="Load SauceDemo Homepage" line="7">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-07-21T23:42:33.081630" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Projects\\TorontoCollege-IIBS\\saucedemo-automation\\results\\browser\\traces\\temp\\38d91bc5-b936-493f-b1c6-36c54ce40768"}</msg>
+<msg time="2026-07-21T23:42:33.547506" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Projects\\TorontoCollege-IIBS\\saucedemo-automation\\results\\browser\\traces\\temp\\38d91bc5-b936-493f-b1c6-36c54ce40768"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-07-21T23:42:33.080575" elapsed="0.468053"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-07-21T23:42:34.361317" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<msg time="2026-07-21T23:42:34.361504" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.saucedemo.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-07-21T23:42:33.549932" elapsed="0.811990"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-07-21T23:42:36.364713" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-07-21T23:42:34.362731" elapsed="2.002303"/>
+</kw>
+<kw name="Login To SauceDemo" owner="LoginPage">
+<kw name="Enter Username" owner="LoginPage">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-07-21T23:42:36.369933" level="INFO">Fills the text 'standard_user' in the given field.</msg>
+<arg>${USERNAME_INPUT}</arg>
+<arg>${username}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-07-21T23:42:36.369475" elapsed="0.031207"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2026-07-21T23:42:36.368434" elapsed="0.032473"/>
+</kw>
+<kw name="Enter Password" owner="LoginPage">
+<kw name="Fill Text" owner="Browser">
+<msg time="2026-07-21T23:42:36.402990" level="INFO">Fills the text 'secret_sauce' in the given field.</msg>
+<arg>${PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2026-07-21T23:42:36.402123" elapsed="0.015408"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2026-07-21T23:42:36.401317" elapsed="0.016343"/>
+</kw>
+<kw name="Click Login Button" owner="LoginPage">
+<kw name="Click" owner="Browser">
+<msg time="2026-07-21T23:42:36.418555" level="INFO">Clicks the element 'id=login-button'.</msg>
+<arg>${LOGIN_BUTTON}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2026-07-21T23:42:36.418133" elapsed="0.085112"/>
+</kw>
+<status status="PASS" start="2026-07-21T23:42:36.417821" elapsed="0.085549"/>
+</kw>
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2026-07-21T23:42:36.366730" elapsed="0.136702"/>
+</kw>
+<kw name="Verify Inventory Page Is Displayed" owner="InventoryPage">
+<kw name="Get Url" owner="Browser">
+<arg>contains</arg>
+<arg>inventory.html</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the current URL.</doc>
+<status status="PASS" start="2026-07-21T23:42:36.504087" elapsed="0.002380"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-07-21T23:42:36.536613" level="INFO">Text: ['Products']</msg>
+<arg>${INVENTORY_TITLE}</arg>
+<arg>==</arg>
+<arg>Products</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-07-21T23:42:36.506625" elapsed="0.030092"/>
+</kw>
+<status status="PASS" start="2026-07-21T23:42:36.503769" elapsed="0.033058"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-07-21T23:42:36.872050" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-07-21T23:42:36.537151" elapsed="0.335097"/>
+</kw>
+<status status="PASS" start="2026-07-21T23:42:33.074107" elapsed="3.798467"/>
+</test>
+<status status="PASS" start="2026-07-21T23:42:33.054145" elapsed="3.825336"/>
+</suite>
+<suite id="s1-s4" name="Second Test" source="C:\Projects\TorontoCollege-IIBS\saucedemo-automation\tests\second_test.robot">
+<test id="s1-s4-t1" name="Load SauceDemo Homepage" line="8">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-07-21T23:42:36.905824" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Projects\\TorontoCollege-IIBS\\saucedemo-automation\\results\\browser\\traces\\temp\\2963203d-ec81-4ed1-ab6c-e9b22d61bfad"}</msg>
+<msg time="2026-07-21T23:42:37.376768" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Projects\\TorontoCollege-IIBS\\saucedemo-automation\\results\\browser\\traces\\temp\\2963203d-ec81-4ed1-ab6c-e9b22d61bfad"}</msg>
+<arg>chromium</arg>
+<arg>headless=False</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-07-21T23:42:36.904459" elapsed="0.472787"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-07-21T23:42:38.189957" level="INFO">Successfully initialized new page object and opened url: https://www.saucedemo.com</msg>
+<msg time="2026-07-21T23:42:38.190067" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-07-21T23:42:37.378905" elapsed="0.811371"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-07-21T23:42:48.192882" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-07-21T23:42:38.191070" elapsed="10.002329"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2026-07-21T23:42:48.202431" level="INFO">Title: 'Swag Labs'</msg>
+<msg time="2026-07-21T23:42:48.202560" level="INFO">${title} = Swag Labs</msg>
+<var>${title}</var>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-07-21T23:42:48.194635" elapsed="0.007955"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${title}</arg>
+<arg>Swag Labs</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2026-07-21T23:42:48.202894" elapsed="0.000531"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-07-21T23:42:48.480756" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-07-21T23:42:48.203724" elapsed="0.277242"/>
+</kw>
+<status status="PASS" start="2026-07-21T23:42:36.896725" elapsed="11.584618"/>
+</test>
+<status status="PASS" start="2026-07-21T23:42:36.888878" elapsed="11.602433"/>
+</suite>
+<status status="PASS" start="2026-07-21T23:41:52.852079" elapsed="55.647680"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="4" fail="0" skip="0">Tests</stat>
+<stat name="First Test" id="s1-s1" pass="1" fail="0" skip="0">Tests.First Test</stat>
+<stat name="Login Test" id="s1-s2" pass="1" fail="0" skip="0">Tests.Login Test</stat>
+<stat name="Pagetestlogin" id="s1-s3" pass="1" fail="0" skip="0">Tests.Pagetestlogin</stat>
+<stat name="Second Test" id="s1-s4" pass="1" fail="0" skip="0">Tests.Second Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
