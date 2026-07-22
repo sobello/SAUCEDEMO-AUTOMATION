@@ -36,3 +36,13 @@ jobs:
     - name: Initialize Browser Library
       run: |
         python -m Browser.entry init
+    - name: Run Robot Tests
+      run: |
+        robot --outputdir results tests/
+
+    - name: Upload Results
+      uses: actions/upload-artifact@v4
+      with:
+        name: RobotReports
+        path: results/
+        
